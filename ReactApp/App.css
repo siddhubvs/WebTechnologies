@@ -1,0 +1,13 @@
+.product{
+  display: inline-block;
+  background-color: aliceblue;
+  margin: 20px;
+  border: 1px saddlebrown ;
+  box-shadow: 0 3px 3px #ccc;
+  width: 250px;
+  height: 200px;
+  padding: 20px;
+}
+body{
+  background-color: thistle;
+}
