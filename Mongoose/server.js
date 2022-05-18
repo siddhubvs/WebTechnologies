@@ -25,12 +25,17 @@ stringify(userSchema)
 userModel = mongoose.model("users",userSchema)
 user1 = new userModel({"name":"rakesh","salary":26000,"age":20})
 
-
+app.post("/addemp",(req,res)=>{
+   userModel.collection.insertOne(user1)
+   res.json(user1)
+   res.end()
+})
 app.get("/users",(req,res)=>{
     
     db.collection("users").find().toArray((err,item)=>{
         res.send(item)
+        res.end()
     })
 })
 
-app.listen(5000,()=>{console.log("server started")})
+app.listen(9000,()=>{console.log("server started")})
